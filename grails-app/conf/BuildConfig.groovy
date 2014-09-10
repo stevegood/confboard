@@ -51,11 +51,17 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         test "org.grails:grails-datastore-test-support:1.0-grails-2.4"
+        build 'org.apache.httpcomponents:httpcore:4.3.2'
+        build 'org.apache.httpcomponents:httpclient:4.3.2'
+        build 'org.apache.httpcomponents:httpmime:4.3.3'
     }
 
     plugins {
         // plugins for the build system only
         build ":tomcat:7.0.55"
+        build(':coveralls:0.1.3', ':rest-client-builder:1.0.3') {
+            export = false
+        }
 
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
@@ -72,5 +78,8 @@ grails.project.dependency.resolution = {
         //compile ":less-asset-pipeline:1.10.0"
         //compile ":coffee-asset-pipeline:1.8.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
+
+        // Test phase plugins
+        test ":code-coverage:2.0.3-2"
     }
 }

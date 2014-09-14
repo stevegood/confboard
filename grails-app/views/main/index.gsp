@@ -57,7 +57,7 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3 col-lg-2">
             <h4>Schedule</h4>
             <hr/>
             <g:each in="${1..2}">
@@ -76,7 +76,7 @@
                 </g:each>
             </g:each>
         </div>
-        <div class="col-sm-9 col-md-6">
+        <div class="col-sm-6 col-lg-8">
             <h4>Notes</h4>
             <hr/>
 
@@ -117,24 +117,22 @@
                 </div>
             </g:each>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-3 col-lg-2">
             <h4>Tweets</h4>
             <hr/>
-            <g:each in="${(0..9)}">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-1">
-                            <img src="https://pbs.twimg.com/profile_images/509767814928818176/dA-oQez7_normal.jpeg"
-                                 alt="stevegood" width="24px" height="24px"/>
-                        </div>
-                        <div class="col-xs-11">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et dignissim magna, nec ultrices mi. Fusce accumsan non lectus eu nullam.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </g:each>
+            <a class="twitter-timeline" href="https://twitter.com/hashtag/s2gx"
+               data-widget-id="509896757371613184">#s2gx Tweets</a>
+            <script>
+                !function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                    if (!d.getElementById(id)) {
+                        js = d.createElement(s);
+                        js.id = id;
+                        js.src = p + "://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js, fjs);
+                    }
+                }(document, "script", "twitter-wjs");
+            </script>
         </div>
     </div>
 </div>
